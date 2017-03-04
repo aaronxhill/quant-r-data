@@ -107,6 +107,8 @@ empdat$dob <-NULL
 ####################################################################################
 
 METADATA <- read.csv("metadata.csv")
+metadataRachelData <- read.csv("metadataRachelData.csv")
+METADATA <- rbind (METADATA, metadataRachelData)
 
 setwd(hd)
 rm(hd)
