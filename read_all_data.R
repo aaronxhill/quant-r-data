@@ -107,6 +107,17 @@ empdat$dob <-NULL
 ####################################################################################
 
 METADATA <- read.csv("metadata.csv")
+
+new.METADATA <- data.frame (dataset = c("WHO","WHO","WHO","WHO","WHO","WHO","WHO","WHO"), 
+                            variable = c("Country","Year", "LEBmf", "LEBf", "LEBm", "LEB60mf", "LEB60f","LEB60m"),
+                            description = c("Country", "Year", "Life expectancy at birth (years) both sexes", 
+                                            "Life expectancy at birth (years), Female", 
+                                            "Life expectancy at birth (years) Male",
+                                            "Life expectancy at age 60 (years) both sexes",
+                                            "Life expectancy at age 60 (years) Female",     
+                                            "Life expectancy at age 60 (years) Male"))
+METADATA <- rbind (METADATA,new.METADATA)
+
 metadataRachelData <- read.csv("metadataRachelData.csv")
 METADATA <- rbind (METADATA, metadataRachelData)
 
